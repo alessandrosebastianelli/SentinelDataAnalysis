@@ -12,10 +12,12 @@ function plotter(data, bands, extra_title)
         title("Histogram " + extra_title, 'FontSize', 24);
     end
     grid on; legend;
+    hold off;
     
     figure;
     imshow(data(:,:,1:length(bands)));
     title("Image show " + extra_title, 'FontSize', 24);
+    hold off;
     
 end
 
