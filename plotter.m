@@ -15,8 +15,8 @@ function plotter(data, bands, extra_title)
     hold off;
     
     figure;
-    imshow(data(:,:,1:length(bands)));
-    title("Image show " + extra_title, 'FontSize', 24);
+    imshow(data(:,:,bands));
+    %title("Image show " + extra_title, 'FontSize', 24);
     hold off;
     
 end

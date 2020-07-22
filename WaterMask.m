@@ -3,8 +3,8 @@ close all
 clc
 %% Load Sentinel-2
 % Load a Sentinel-1 acquisition
-S2 = im2double(imread('data/S2-lat_45_77246575390536_lon_10_51143930950297-2019-06-26.tif'));
-S2 = normalize_data(S2, 'min-max', 2, 0);
+[S2, ~] = read_data('data/S2-lat_45_85299971127813_lon_10_852932810361423-2019-06-13_2.tif', 'geo');
+S2 = normalize_data(S2, 'min-max', 2.5, 0);
 
 % Sentinel-2 
 % Bands -> [B1, B2 (B), B3 (G), B4 (R), B5, B6, B7, B8, B8A, B9, B10, B11, B12, QA10, QA20, QA60]
@@ -36,8 +36,7 @@ figure,
 imshow(mask_2)
 
 %% Load Sentinel-2
-% Load a Sentinel-1 acquisition
-S2 = im2double(imread('data/S2-lat_45_77246575390536_lon_10_51143930950297-2019-06-26.tif'));
+[S2, ~] = read_data('data/S2-lat_45_85299971127813_lon_10_852932810361423-2019-06-13_2.tif', 'geo');
 S2 = normalize_data(S2, 'min-max', 1.1, 0);
 
 % Sentinel-2 
