@@ -1,5 +1,5 @@
-
 function [masked, mask] = water_mask(data, bands, threshold)
+%WATER_MASK create a water mask using e IR bands.
 
 if nargin < 2
     disp('Invalid arguments error: data and bands must be specified');

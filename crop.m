@@ -5,15 +5,15 @@ function [cropped_data] = crop(data, cropping_limits)
 %
 %  .------------------------------------.
 %  |                                    |
-%  |    x_start, y_start_____.          |
-%  |    !                    !          |
-%  |    !                    !          |
-%  |    !_________x_end,y_end!          |
+%  |    x_start, y_start___.            |
+%  |    !                  !            |
+%  |    !                  !            |
+%  |    !                  !            |
+%  |    !  A               !            |
+%  |    !_______x_end,y_end!            |
 %  |                                    |
 %  |                                    |
-%  |                                    |
-%  |                                    |
-%  |                                    |
+%  |                                  B |
 %  .------------------------------------.
 %
 % the coordinates must be contained into the range of coordinates of the

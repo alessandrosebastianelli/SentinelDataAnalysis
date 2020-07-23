@@ -20,8 +20,10 @@ end
     
 s = size(data);
 normalized_data = zeros(s);
+
 a = zeros(s(3), 1);
 b = zeros(s(3), 1);
+
 
 for i=1:s(3)
     if normalization == "min-max"
