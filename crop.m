@@ -19,7 +19,7 @@ function [cropped_data] = crop(data, cropping_limits)
 % the coordinates must be contained into the range of coordinates of the
 % input image.
 
-if nargin <= 0
+if nargin < 2
     disp('Invalid arguments error: data and cropping_list must be specified');
     return;
 end
