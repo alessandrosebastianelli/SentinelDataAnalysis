@@ -1,16 +1,12 @@
-
-
 function [restored_data] = restore_range(data, normalization, a, b, alpha, beta)
-
-% RESTORE_RAMGE  Restore the range of normalized data
-%   [restored_data] = restore_range(data, normalization, a, b, alpha, beta)
-%   - data: multichannel satellite image
-%   - normalization: string value for normalization type
-%   - a: double vector that stores max or mean values
-%   - b: double vector that stores min or std values
-%   - alpha: double multiplier for range adjustment
-%   - beta: double offset for range adjustment
-
+%RESTORE_RAMGE  Restore the range of normalized data
+%[restored_data] = restore_range(data, normalization, a, b, alpha, beta)
+%- data: multichannel satellite image
+%- normalization: string value for normalization type
+%- a: double vector that stores max or mean values
+%- b: double vector that stores min or std values
+%- alpha: double multiplier for range adjustment
+%- beta: double offset for range adjustment
 % This function must be used after the normalize_data function, to restore
 % the orignal range of the input data.
 

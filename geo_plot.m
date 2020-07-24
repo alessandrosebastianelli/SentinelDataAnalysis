@@ -1,10 +1,10 @@
 function geo_plot(data, coordinates, region, zoom)
 %GEO_PLOT plot the data on a georeferenced map
-%   - data: satellite data (only <= 3 bands must be passed)
-%   - coordinates: vector with latitude and logitude of a reference point
-%   - region: string that identify the region under analysis, e.g. Europe,
-%   Italy, World
-%   - zoom: int value used to magnify the image
+%- data: satellite data (only <= 3 bands must be passed)
+%- coordinates: vector with latitude and logitude of a reference point
+%- region: string that identify the region under analysis, e.g. Europe,
+%Italy, World
+%- zoom: int value used to magnify the image
 
 if nargin < 2
     disp('Invalid arguments error: path and coordinates must be specified');

@@ -1,8 +1,8 @@
 function [masked, mask] = water_mask(data, bands, threshold)
 %WATER_MASK create a water mask using e IR bands.
-%  - data: multiband satellite data
-%  - bands: vector of IR bands identifier
-%  - threshold: float value used by the algorithm
+%- data: multiband satellite data
+%- bands: vector of IR bands identifier
+%- threshold: float value used by the algorithm
 
 if nargin < 2
     disp('Invalid arguments error: data and bands must be specified');

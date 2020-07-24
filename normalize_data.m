@@ -1,13 +1,12 @@
-
 function [normalized_data, a, b, alpha, beta] = normalize_data(data, normalization, alpha, beta)
-% NORMALIZE_DATA  Normalize the data
-%   [normalized_data, a, b, alpha, beta] = normalize_data(data, normalization, alpha, beta)
-%   - data: multichannel satellite image
-%   - normalization: string value for normalization type
-%   - a: double vector that stores max or mean values
-%   - b: double vector that stores min or std values
-%   - alpha: double multiplier for range adjustment
-%   - beta: double offset for range adjustment
+%NORMALIZE_DATA  Normalize the data
+%[normalized_data, a, b, alpha, beta] = normalize_data(data, normalization, alpha, beta)
+%- data: multichannel satellite image
+%- normalization: string value for normalization type
+%- a: double vector that stores max or mean values
+%- b: double vector that stores min or std values
+%- alpha: double multiplier for range adjustment
+%- beta: double offset for range adjustment
 
 if nargin == 1 
     alpha = 1;
