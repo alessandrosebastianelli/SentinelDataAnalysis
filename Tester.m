@@ -8,18 +8,13 @@ info = geotiffinfo(path);
 [normalized_data, a, b, alpha, beta] = normalize_data(data, 'min-max', 5, 0);
 
 
+
+
+%[watermask, mask] = water_mask(normalized_data, [13 12 8]);
 rgb = create_composite(normalized_data, [4 3 2]);
 
-figure,
+geo_plot(rgb, [45.85299971127813 10.852932810361423], 'Italy', 1);
 
-ax = worldmap('Europe')
 
-%setm(ax, 'MapProjection','lambcyln');
-load coast
-setm(ax, 'Origin', [0 0 0])
-plotm(lat, long)
-
-mapshow(ax, rgb, metadata);
-getm(ax,'MapProjection')
 
 
