@@ -1,7 +1,7 @@
 function [data, metadata] = read_data(path, mode)
 %READ_DATA loads satellite data given the path. If mode is set to std
 %(standard) data are loaded without metadata (georeferencing, satellite
-%information, timestamp). If the mode is set to geo or geo2 the data are loaded
+%information, timestamp). If the mode is set to geo the data are loaded
 %with metadata.
 %
 %The mapping toolbox must be installed for geo mode.
@@ -16,6 +16,9 @@ if mode == "std"
     metadata = 0;
 elseif mode == "geo"
     [data, metadata] = geotiffread(path);
+elseif mode == "std2"
+    data = imread(path);
+    metadata = 0;
 else
     data = zeros(256, 256);
     metadata = 0;
