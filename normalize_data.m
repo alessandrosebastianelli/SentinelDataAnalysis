@@ -8,13 +8,13 @@ function [normalized_data, a, b, alpha, beta] = normalize_data(data, normalizati
 %- alpha: double multiplier for range adjustment
 %- beta: double offset for range adjustment
 
-if nargin == 1 
+if nargin == 0
+    disp('Invalid arguments error: data must be specified');
+    return;
+elseif nargin == 1 
     alpha = 1;
     beta = 0;
     normalization = "min-max";
-elseif nargin == 0
-    disp('Invalid arguments error: data must be specified');
-    return 
 end
     
 s = size(data);
@@ -22,7 +22,6 @@ normalized_data = zeros(s);
 
 a = zeros(s(3), 1);
 b = zeros(s(3), 1);
-
 
 for i=1:s(3)
     if normalization == "min-max"
