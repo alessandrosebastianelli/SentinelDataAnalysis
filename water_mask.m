@@ -24,7 +24,7 @@ for i=1:s(1)
             masked(i,j,:) = data(i, j, :);
             mask(i,j,:) = 0;
         else
-            masked(i,j,:) = 1;
+            masked(i,j,:) = 0;
             mask(i,j,1) = 1;
         end
     end
