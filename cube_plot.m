@@ -4,6 +4,13 @@ function cube_plot(data, step)
 %-step: integer used to select a defined number of bands to be plotted
 %together
 
+if nargin < 1
+    disp('Invalid arguments error: data must be specified');
+    return;
+elseif nargin == 1
+    step = 1;
+end
+
 s = size(data);
 
 figure,
