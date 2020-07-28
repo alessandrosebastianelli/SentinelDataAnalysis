@@ -14,6 +14,7 @@ data(data<-30) = -30;
 [normalized_data, a, b, alpha, beta] = normalize_data(data, 'min-max', 1, 0);
 
 %% Test Apply Filter
+% VV polarization normalized_data(:,:,1), VH polarization normalized_data(:,:,2)
 figure,
 imshow(normalized_data(:,:,1))
 

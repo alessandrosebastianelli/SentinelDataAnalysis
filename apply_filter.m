@@ -1,6 +1,6 @@
 function [filtered] = apply_filter(data, mode)
 %APPLY_FILTER: apply a filter to the input data
-%-data: input data to be filtered
+%-data: input data to be filtered 
 %-mode: type of filter -> wiener, median, median2, minimum, maximum, min-n-s-w-e
 
 if nargin < 2 
@@ -8,12 +8,10 @@ if nargin < 2
     return;
 end
 
-size = [5 5];
-
 if mode == "wiener"
-    filtered = wiener2(data,[size(1) size(2)]);
+    filtered = wiener2(data,[5 5]);
 elseif mode == "median"
-    filtered = medfilt2(data,[size(1) size(2)]);
+    filtered = medfilt2(data,[5 5]);
 elseif mode == "median2"
     filtered = ordfilt2(data,5,ones(3,3));
 elseif mode == "minimum"
