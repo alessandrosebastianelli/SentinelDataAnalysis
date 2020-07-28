@@ -30,7 +30,6 @@ hold off;
 figure;
 imshow(data(:,:,bands));
 hold off;
-
 if plothistograms == 1
     s = size(data);
     for i = 1:s(3)
