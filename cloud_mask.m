@@ -14,7 +14,6 @@ elseif nargin == 2
     maskData = 0.6;
 end
 
-
 s = size(data);
 masked = zeros(s(1), s(2), s(3));
 mask = zeros(s(1), s(2), 3);
