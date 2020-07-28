@@ -10,6 +10,11 @@ function [restored_data] = restore_range(data, normalization, a, b, alpha, beta)
 % This function must be used after the normalize_data function, to restore
 % the orignal range of the input data.
 
+if nargin < 6
+    disp('Invalid arguments error: data, normalization, a, b, alpha and beta must be specified');
+    return;
+end
+
 s = size(data);
 restored_data = zeros(s);
 
