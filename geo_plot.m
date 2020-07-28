@@ -14,7 +14,6 @@ elseif nargin == 2
     zoom = 1;
 end
 
-
 figure,
 load geoid;
 % Create a map
@@ -35,7 +34,6 @@ plot(x,y,'.', 'MarkerEdgeColor','r','MarkerFaceColor','r','MarkerSize', 30);
 hold on
 
 %% Plot the image
-
 sizeDeg = zoom;
 
 img_3D=data;
