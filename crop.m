@@ -12,7 +12,6 @@ function [cropped_data] = crop(data, cropping_limits)
 %|    !  A               !            |
 %|    !_______x_end,y_end!            |
 %|                                    |
-%|                                    |
 %|                                  B |
 %.------------------------------------.
 %
