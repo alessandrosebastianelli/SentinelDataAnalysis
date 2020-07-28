@@ -3,12 +3,13 @@ function [data, metadata] = read_data(path, mode)
 %(standard) data are loaded without metadata (georeferencing, satellite
 %information, timestamp). If the mode is set to geo the data are loaded
 %with metadata.
-%
+%-path: string with relative link to the image
+%-mode: string with the functioning mode
 %The mapping toolbox must be installed for geo mode.
 
-if nargin < 2 || nargin > 2
+if nargin < 2
     disp('Invalid arguments error: path and mode must be specified');
-    return 
+    return;
 end
 
 if mode == "std"
